@@ -25,7 +25,7 @@
 }
 
 /* barnd section */
-.barnd-container {
+.brand-container {
   position: relative;
   overflow: hidden;
   min-height: 150px;
@@ -33,9 +33,10 @@
 
 .brand-content {
   position: absolute;
-  top: 8rem;
-  right: 30%;
+  top: 1.5rem;
+  left: 18%;
   z-index: 5;
+  width: 100%;
 }
 
 .title {
@@ -87,6 +88,9 @@
   }
   .brand-content {
     height: 100px;
+    left: 0;
+    top: 0.5rem;
+    padding-inline: 1rem;
   }
 }
 

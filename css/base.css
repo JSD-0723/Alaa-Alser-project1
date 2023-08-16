@@ -19,6 +19,7 @@ p {
   padding: 0.25rem 0.5rem;
   border: 1px solid var(--lines-color);
   cursor: pointer;
+  border-radius: 0.25rem;
 }
 
 .text-sm {
