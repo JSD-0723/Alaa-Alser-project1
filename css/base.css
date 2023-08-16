@@ -8,6 +8,19 @@ p {
   margin: 0;
 }
 
+.container {
+  max-width: 120rem;
+  padding-inline: 2rem;
+}
+
+.outlined-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--lines-color);
+  cursor: pointer;
+}
+
 .text-sm {
   font-size: 0.75rem;
 }
@@ -222,4 +235,14 @@ p {
 
 .p-5 {
   padding: 1.5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .container {
+    padding-inline: 1rem;
+  }
 }
