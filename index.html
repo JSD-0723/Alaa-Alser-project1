@@ -19,16 +19,16 @@
   </head>
 
   <body>
-    <header class="container header-container py-5">
-      <div class="logo text-md">Web Topics</div>
+    <header class="container header-container py-2">
+      <div class="logo text-lg">Web Topics</div>
       <div class="header-right">
         <ion-button class="outlined-btn" aria-label="Dark Mode">
-          <ion-icon name="moon-outline"></ion-icon>
-          <span class="button-text">Dark Mode</span>
+          <ion-icon class="ion-icon" name="moon-outline"></ion-icon>
+          <span class="button-text text-md">Dark Mode</span>
         </ion-button>
         <ion-button class="outlined-btn" aria-label="Favorite">
-          <ion-icon name="heart-outline"></ion-icon>
-          <span class="button-text">Favorites</span>
+          <ion-icon class="ion-icon" name="heart-outline"></ion-icon>
+          <span class="button-text text-md">Favorites</span>
         </ion-button>
       </div>
     </header>
@@ -39,8 +39,8 @@
       </div>
       <div class="container brand-content">
         <div class="brand-content">
-          <h1 class="title text-lg">Welcome to our website!</h1>
-          <p class="sub-title">
+          <h1 class="title text-xl">Welcome to our website!</h1>
+          <p class="sub-title text-lg">
             We have a new design that's fresh new modern and easy to use.
           </p>
         </div>
@@ -48,11 +48,11 @@
     </section>
     <main class="main-section">
       <div class="container">
-        <section class="action-section">
+        <section class="action-section my-4">
           <div class="action-container">
             <div class="search-container">
               <label for="search" aria-label="search">
-                <ion-icon name="search-outline"></ion-icon>
+                <ion-icon class="ion-icon" name="search-outline"></ion-icon>
               </label>
               <input
                 type="search"
@@ -62,22 +62,22 @@
               />
             </div>
             <div class="optoins-controller">
-              <label class="text-sm pl-1" for="sortby">Sort by:</label>
+              <label class="text-md pl-1" for="sortby">Sort by:</label>
               <select id="sort" aria-label="sort">
                 <optgroup>
-                  <option value="Popular">Popular</option>
-                  <option value="Newest">Newest</option>
-                  <option value="Oldest">Oldest</option>
+                  <option class="text-md" value="Popular">Popular</option>
+                  <option class="text-md" value="Newest">Newest</option>
+                  <option class="text-md" value="Oldest">Oldest</option>
                 </optgroup>
               </select>
             </div>
             <div class="optoins-controller">
-              <label class="text-sm pl-1" for="filter">Filter by:</label>
+              <label class="text-md pl-1" for="filter">Filter by:</label>
               <select id="filter" aria-label="filter">
                 <optgroup>
-                  <option value="Name">Name</option>
-                  <option value="category">category</option>
-                  <option value="rate">rate</option>
+                  <option class="text-md" value="Name">Name</option>
+                  <option class="text-md" value="category">category</option>
+                  <option class="text-md" value="rate">rate</option>
                 </optgroup>
               </select>
             </div>
@@ -330,7 +330,7 @@
       </div>
       <footer class="footer-container">
         <span> Developed with </span>
-        <ion-icon class="px-1" name="heart"></ion-icon>
+        <ion-icon class="ion-icon px-1" name="heart"></ion-icon>
         <span> @ 2023 </span>
       </footer>
     </main>
