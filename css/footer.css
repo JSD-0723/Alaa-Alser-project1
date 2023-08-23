@@ -2,8 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0;
 }
 
 ion-icon[name="heart"] {
   color: var(--heart-color);
+  font-size: 1.8rem;
 }

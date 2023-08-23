@@ -9,11 +9,11 @@ p {
 }
 
 .container {
-  padding-inline: 6rem;
+  padding-inline: 4.5rem;
 }
 
 .ion-icon {
-  font-size: 1.6rem;
+  font-size: 1.1rem;
 }
 
 a {
@@ -21,19 +21,19 @@ a {
 }
 
 .text-sm {
-  font-size: 1rem;
+  font-size: 0.75rem;
 }
 
 .text-md {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
 
 .text-lg {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .text-xl {
-  font-size: 2rem;
+  font-size: 1.65rem;
 }
 
 .px-1 {

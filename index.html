@@ -15,20 +15,29 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/topics.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/favourite.css" />
     <title>Web Topics</title>
   </head>
 
   <body>
-    <header class="container header-container py-2">
-      <div class="logo text-lg">Web Topics</div>
+    <header class="container header-container">
+      <div class="logo">Web Topics</div>
       <div class="header-right">
-        <ion-button class="outlined-btn" aria-label="Dark Mode">
+        <ion-button
+          id="themeToggle"
+          class="outlined-btn"
+          aria-label="Dark Mode"
+        >
           <ion-icon class="ion-icon" name="moon-outline"></ion-icon>
-          <span class="button-text text-md">Dark Mode</span>
+          <span class="button-text">Dark Mode</span>
         </ion-button>
-        <ion-button class="outlined-btn" aria-label="Favorite">
+        <ion-button
+          id="openFavoritesList"
+          class="outlined-btn"
+          aria-label="Favorite"
+        >
           <ion-icon class="ion-icon" name="heart-outline"></ion-icon>
-          <span class="button-text text-md">Favorites</span>
+          <span class="button-text">Favourites</span>
         </ion-button>
       </div>
     </header>
@@ -39,17 +48,17 @@
       </div>
       <div class="container brand-content">
         <div class="brand-content">
-          <h1 class="title text-xl">Welcome to our website!</h1>
-          <p class="sub-title text-lg">
-            We have a new design that's fresh new modern and easy to use.
+          <h1 class="title">Welcome to our website!</h1>
+          <p class="sub-title">
+            We have a new design that's fresh, new modern and easy to use.
           </p>
         </div>
       </div>
     </section>
     <main class="main-section">
       <div class="container">
-        <section class="action-section my-4">
-          <div class="action-container">
+        <section class="action-section">
+          <section class="action-container">
             <div class="search-container">
               <label for="search" aria-label="search">
                 <ion-icon class="ion-icon" name="search-outline"></ion-icon>
@@ -61,28 +70,29 @@
                 placeholder="Search the website..."
               />
             </div>
-            <div class="optoins-controller">
-              <label class="text-md pl-1" for="sortby">Sort by:</label>
+            <div class="optoins-controller sort-container">
+              <label class="action-lable" for="sortby">Sort by:</label>
               <select id="sort" aria-label="sort">
                 <optgroup>
-                  <option class="text-md" value="Popular">Popular</option>
-                  <option class="text-md" value="Newest">Newest</option>
-                  <option class="text-md" value="Oldest">Oldest</option>
+                  <option value="Popular">Default</option>
+                  <option value="Newest">Newest</option>
+                  <option value="Oldest">Oldest</option>
                 </optgroup>
               </select>
             </div>
-            <div class="optoins-controller">
-              <label class="text-md pl-1" for="filter">Filter by:</label>
+            <div class="optoins-controller filter-container">
+              <label class="action-lable" for="filter">Filter by:</label>
               <select id="filter" aria-label="filter">
                 <optgroup>
-                  <option class="text-md" value="Name">Name</option>
-                  <option class="text-md" value="category">category</option>
-                  <option class="text-md" value="rate">rate</option>
+                  <option value="Popular">Default</option>
+                  <option value="category">category</option>
+                  <option value="rate">rate</option>
                 </optgroup>
               </select>
             </div>
-          </div>
+          </section>
         </section>
+        <h2 class="topics-title">"24" Web Topics Found</h2>
         <div class="topics-section">
           <div class="cards-container" id="cards">
             <div class="card-container">
@@ -91,24 +101,40 @@
                   <div class="card-img">
                     <img src="./assets/html.png" alt="HTML" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Web development Languages</h3>
+                  <div class="card-content">
+                    <h3 class="title">Web development Languages</h3>
                     <h4 class="text-lg">HTML</h4>
-                    <div class="author text-md pt-2">Author: Sarah Smith</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Sarah Smith</div>
                   </div>
                 </div>
               </a>
             </div>
             <div class="card-container">
-              <a href="/card.html">
+              <a>
                 <div class="card">
                   <div class="card-img">
                     <img src="./assets/css.webp" alt="CSS" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Web development Languages</h3>
+                  <div class="card-content">
+                    <h3 class="title">
+                      Web development Languages Web development Language
+                    </h3>
                     <h4 class="text-lg">CSS</h4>
-                    <div class="author text-md pt-2">Author: David Lee</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author">Author: David Lee</div>
                   </div>
                 </div>
               </a>
@@ -119,10 +145,17 @@
                   <div class="card-img">
                     <img src="./assets/javascript.jpg" alt="JavaScript" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Web development Languages</h3>
+                  <div class="card-content">
+                    <h3 class="title">Web development Languages</h3>
                     <h4 class="text-lg">JavaScript</h4>
-                    <div class="author text-md pt-2">Author: Emily Chen</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Emily Chen</div>
                   </div>
                 </div>
               </a>
@@ -133,10 +166,17 @@
                   <div class="card-img">
                     <img src="./assets/jquery.png" alt="JQuery" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Web development Languages</h3>
+                  <div class="card-content">
+                    <h3 class="title">Frontend Frameworks and Libraries</h3>
                     <h4 class="text-lg">JQuery</h4>
-                    <div class="author text-md pt-2">Author: John johnson</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: John johnson</div>
                   </div>
                 </div>
               </a>
@@ -147,12 +187,17 @@
                   <div class="card-img">
                     <img src="./assets/angular.png" alt="Angular" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Frontend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Frontend Frameworks and Libraries</h3>
                     <h4 class="text-lg">Angular</h4>
-                    <div class="author text-md pt-2">Author: Jessica Davis</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Jessica Davis</div>
                   </div>
                 </div>
               </a>
@@ -163,12 +208,17 @@
                   <div class="card-img">
                     <img src="./assets/react.webp" alt="React" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Frontend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Frontend Frameworks and Libraries</h3>
                     <h4 class="text-lg">React</h4>
-                    <div class="author text-md pt-2">Author: Daniel Brown</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Daniel Brown</div>
                   </div>
                 </div>
               </a>
@@ -179,12 +229,17 @@
                   <div class="card-img">
                     <img src="./assets/vuejs.jpeg" alt="Vue.js" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Frontend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Frontend Frameworks and Libraries</h3>
                     <h4 class="text-lg">Vue.js</h4>
-                    <div class="author text-md pt-2">Author: Ava jones</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Ava jones</div>
                   </div>
                 </div>
               </a>
@@ -195,12 +250,17 @@
                   <div class="card-img">
                     <img src="./assets/nodejs.webp" alt="Node.js" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Backend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Backend Frameworks and Libraries</h3>
                     <h4 class="text-lg">Node.js</h4>
-                    <div class="author text-md pt-2">Author: Michael Kim</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Michael Kim</div>
                   </div>
                 </div>
               </a>
@@ -211,14 +271,17 @@
                   <div class="card-img">
                     <img src="./assets/expressjs.webp" alt="Express.js" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Backend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Backend Frameworks and Libraries</h3>
                     <h4 class="text-lg">Express.js</h4>
-                    <div class="author text-md pt-2">
-                      Author: Sophia Rodriguez
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
                     </div>
+                    <div class="author pt-2">Author: Sophia Rodriguez</div>
                   </div>
                 </div>
               </a>
@@ -229,12 +292,17 @@
                   <div class="card-img">
                     <img src="./assets/ruby.jpeg" alt="Ruby on Rails" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Backend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Backend Frameworks and Libraries</h3>
                     <h4 class="text-lg">Ruby on Rails</h4>
-                    <div class="author text-md pt-2">Author: William Lee</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: William Lee</div>
                   </div>
                 </div>
               </a>
@@ -246,14 +314,17 @@
                   <div class="card-img">
                     <img src="./assets/django.jpeg" alt="Django" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Backend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Backend Frameworks and Libraries</h3>
                     <h4 class="text-lg">Django</h4>
-                    <div class="author text-md pt-2">
-                      Author: Olivia Martinez
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
                     </div>
+                    <div class="author pt-2">Author: Olivia Martinez</div>
                   </div>
                 </div>
               </a>
@@ -264,14 +335,17 @@
                   <div class="card-img">
                     <img src="./assets/flask.webp" alt="Flask" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">
-                      Backend Frameworks and Libraries
-                    </h3>
+                  <div class="card-content">
+                    <h3 class="title">Backend Frameworks and Libraries</h3>
                     <h4 class="text-lg">Flask</h4>
-                    <div class="author text-md pt-2">
-                      Author: Ethan Thompson
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
                     </div>
+                    <div class="author pt-2">Author: Ethan Thompson</div>
                   </div>
                 </div>
               </a>
@@ -282,10 +356,17 @@
                   <div class="card-img">
                     <img src="./assets/sql.png" alt="SQL" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Databases and APIs</h3>
+                  <div class="card-content">
+                    <h3 class="title">Databases and APIs</h3>
                     <h4 class="text-lg">SQL</h4>
-                    <div class="author text-md pt-2">Author: Madison Davis</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Madison Davis</div>
                   </div>
                 </div>
               </a>
@@ -296,12 +377,17 @@
                   <div class="card-img">
                     <img src="./assets/nosql.png" alt="NoSQL" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Databases and APIs</h3>
+                  <div class="card-content">
+                    <h3 class="title">Databases and APIs</h3>
                     <h4 class="text-lg">NoSQL</h4>
-                    <div class="author text-md pt-2">
-                      Author: Isabella Wilson
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
                     </div>
+                    <div class="author pt-2">Author: Isabella Wilson</div>
                   </div>
                 </div>
               </a>
@@ -312,10 +398,17 @@
                   <div class="card-img">
                     <img src="./assets/restapi.jpeg" alt="REST APIs" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Databases and APIs</h3>
+                  <div class="card-content">
+                    <h3 class="title">Databases and APIs</h3>
                     <h4 class="text-lg">REST APIs</h4>
-                    <div class="author text-md pt-2">Author: Jacob Garcia</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Jacob Garcia</div>
                   </div>
                 </div>
               </a>
@@ -326,10 +419,17 @@
                   <div class="card-img">
                     <img src="./assets/graphql.png" alt="GraphQL" />
                   </div>
-                  <div class="card-content p-3">
-                    <h3 class="title text-md">Databases and APIs</h3>
+                  <div class="card-content">
+                    <h3 class="title">Databases and APIs</h3>
                     <h4 class="text-lg">GraphQL</h4>
-                    <div class="author text-md pt-2">Author: Mia Brown</div>
+                    <div class="star-rating">
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star" class="star"></ion-icon>
+                      <ion-icon name="star-half" class="star"></ion-icon>
+                      <ion-icon name="star-outline" class="star"></ion-icon>
+                    </div>
+                    <div class="author pt-2">Author: Mia Brown</div>
                   </div>
                 </div>
               </a>
@@ -338,14 +438,63 @@
         </div>
       </div>
       <footer class="footer-container py-4">
-        <span class="text-lg"> Developed with</span>
+        <span class="text-lg">Developed with</span>
         <ion-icon class="ion-icon px-1" name="heart"></ion-icon>
         <span class="text-lg"> @ 2023</span>
       </footer>
+      <section id="favoritesList" class="favorites-list container">
+        <h2 class="favorites-list-title">My Favourite Topics</h2>
+        <div class="favorites-list-items" id="favoritesListItems">
+          <div class="favorite-card">
+            <div class="favorites-card-img">
+              <img src="./assets/react.webp" alt="React" />
+            </div>
+            <div class="favorites-content">
+              <h3>React</h3>
+              <div class="favorites-star-rating">
+                <ion-icon name="star" class="star"></ion-icon>
+                <ion-icon name="star" class="star"></ion-icon>
+                <ion-icon name="star" class="star"></ion-icon>
+                <ion-icon name="star-half" class="star"></ion-icon>
+                <ion-icon name="star-outline" class="star"></ion-icon>
+              </div>
+            </div>
+          </div>
+          <div class="favorite-card">
+            <div class="favorites-card-img">
+              <img src="./assets/cloud.jpeg" alt="React" />
+            </div>
+            <div class="favorites-content">
+              <h3>Cloud Computing</h3>
+              <div class="favorites-star-rating">
+                <ion-icon name="star" class="star"></ion-icon>
+                <ion-icon name="star" class="star"></ion-icon>
+                <ion-icon name="star" class="star"></ion-icon>
+                <ion-icon name="star-half" class="star"></ion-icon>
+                <ion-icon name="star-outline" class="star"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const htmlElement = document.querySelector("html");
+      const favoritesList = document.getElementById("favoritesList");
+      const favoritesListButton = document.getElementById("openFavoritesList");
+
+      themeToggle.addEventListener("click", () => {
+        htmlElement.classList.toggle("dark-theme");
+      });
+
+      favoritesListButton.addEventListener("click", () => {
+        favoritesList.classList.toggle("open");
+      });
+    </script>
   </body>
 </html>
