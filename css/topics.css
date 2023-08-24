@@ -49,8 +49,8 @@ input:focus {
   display: inline-flex;
   flex-direction: column;
   background-color: var(--bg_default);
-  box-shadow: 0 5px 10px -5px var(--shadow-color),
-    0 -5px 10px -5px var(--shadow-color);
+  box-shadow: 0 2.5px 7px -2.5px var(--shadow-color),
+    0 -2.5px 7px -2.5px var(--shadow-color);
 }
 
 .action-lable {
@@ -168,7 +168,7 @@ select {
   }
 
   .optoins-controller {
-    box-shadow: 0 5px 10px -5px var(--shadow-color);
+    box-shadow: 0 3px 8px -3px var(--shadow-color);
     border-top: 1px solid var(--lines-color);
   }
 
