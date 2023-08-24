@@ -7,6 +7,7 @@
 .main-card-section {
   background-color: var(--bg_body);
   flex-grow: 1;
+  padding-bottom: 15rem;
 }
 
 .topic-content {
